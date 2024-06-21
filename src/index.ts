@@ -14,10 +14,7 @@ const seyfertClient = new Client({
 	commands: {
 		prefix: () => [";"],
 		argsParser: (content, command) =>
-			parser.runParser(content, command.options as CommandOption[]) as Record<
-				string,
-				string
-			>,
+			parser.runParser(content, command) as Record<string, string>,
 	},
 	allowedMentions: {
 		parse: [],
